@@ -1,0 +1,15 @@
+{
+  "name": "parcourssup",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "devcontainer up --workspace-folder . && devcontainer exec --workspace-folder . nvim",
+    "new": "devcontainer exec --workspace-folder . symfony new",
+    "symfony": "devcontainer exec --workspace-folder . symfony",
+    "composer": "devcontainer exec --workspace-folder . composer",
+    "serve": "devcontainer exec --workspace-folder . symfony serve -d"
+  },
+  "author": "bernard.pagoaga@gmail.com",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Symfony + PostgreSQL Dev with Neovim",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "postCreateCommand": "composer install || true",
+  "customizations": {},
+  "mounts": [
+    "source=${env:HOME}/.config/nvim,target=/root/.config/nvim,type=bind"
+  ]
+}

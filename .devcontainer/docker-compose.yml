@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+      - ${HOME}/.config/nvim:/root/.config/nvim:ro
+    depends_on:
+      - db
+    command: sleep infinity
+    networks:
+      - symfony-net
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: symfony
+      POSTGRES_PASSWORD: symfony
+      POSTGRES_DB: symfony
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - symfony-net
+
+volumes:
+  db_data:
+
+networks:
+  symfony-net:
