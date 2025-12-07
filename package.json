@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "devcontainer up --workspace-folder . && devcontainer exec --workspace-folder . nvim",
-    "new": "devcontainer exec --workspace-folder . symfony new",
+    "new": "devcontainer exec --workspace-folder . symfony new monapp --no-git",
     "symfony": "devcontainer exec --workspace-folder . symfony",
     "composer": "devcontainer exec --workspace-folder . composer",
     "serve": "devcontainer exec --workspace-folder . symfony serve -d"

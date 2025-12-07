@@ -4,7 +4,7 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "remoteUser": "root",
-  "postCreateCommand": "composer install || true",
+  "postCreateCommand": "git config --global user.name \"Dev User\" && git config --global user.email \"dev@example.com\" && composer install || true",
   "customizations": {},
   "mounts": [
     "source=${env:HOME}/.config/nvim,target=/root/.config/nvim,type=bind"
